@@ -1,0 +1,87 @@
+#card-widget {
+  max-width: 450px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Контейнер для иконок — flex-контейнер */
+.card-logos-container {
+  display: flex;
+  justify-content: center;          /* Центрируем иконки по горизонтали */
+  align-items: center;             /* Выравниваем по вертикали */
+  gap: 12px;                      /* Равномерные отступы между иконками */
+  margin: 15px 0;
+  flex-wrap: wrap;                /* Перенос на новую строку при нехватке места */
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+}
+
+.card-logo {
+  width: 48px;
+  height: 40px;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.card-logo.active {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.12);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+#card-number {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+#card-number:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+#validateCardBtn {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#validateCardBtn:hover {
+  background-color: #0056b3;
+}
+
+#message {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+  min-height: 24px;
+  font-size: 15px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+  font-size: 0.85em;
+}

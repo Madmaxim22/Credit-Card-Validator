@@ -1,0 +1,28 @@
+version: 1.0.{build}
+
+environment:
+  matrix:
+    - node_version: 20
+
+install:
+  - ps: Install-Product node $env:node_version
+  - choco install yarn --yes
+  - yarn install --frozen-lockfile
+
+build: off
+
+test_script:
+  - yarn test
+
+cache:
+  - node_modules
+  - "%LOCALAPPDATA%\\Yarn\\Cache"
+
+on_finish:
+  - ps: |
+      if ($LastExitCode -ne 0) {
+        Write-Host "Тесты провалились (код: $LastExitCode)"
+        $host.SetShouldExit($LastExitCode)
+      } else {
+        Write-Host "Все тесты пройдены"
+      }
