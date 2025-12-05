@@ -1,0 +1,1 @@
+[![Статус сборки](https://ci.appveyor.com/api/projects/status/g0uwtm7yqsj0c9gh?svg=true)](https://ci.appveyor.com/project/Madmaxim22/credit-card-validator)
