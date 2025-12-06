@@ -13,11 +13,11 @@ build: off
 
 test_script:
   # Запуск тестового сервера
-  - start yarn start:test-server
+  - start yarn start
   # Ожидание запуска сервера
   - ps: Start-Sleep -Seconds 10
   # Запуск E2E-тестов
-  - yarn test:e2e
+  - yarn test
 
 cache:
   - node_modules
