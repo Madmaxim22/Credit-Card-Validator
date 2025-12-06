@@ -6,13 +6,18 @@ environment:
 
 install:
   - ps: Install-Product node $env:node_version
-  - choco install yarn --yes
+  - choco install yarn googlechrome --yes
   - yarn install --frozen-lockfile
 
 build: off
 
 test_script:
-  - yarn test
+  # Запуск тестового сервера
+  - start yarn start:test-server
+  # Ожидание запуска сервера
+  - ps: Start-Sleep -Seconds 10
+  # Запуск E2E-тестов
+  - yarn test:e2e
 
 cache:
   - node_modules
