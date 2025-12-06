@@ -13,7 +13,7 @@ build: off
 
 test_script:
   # Запуск тестового сервера
-  - start yarn start
+  - yarn start
   # Ожидание запуска сервера
   - ps: Start-Sleep -Seconds 10
   # Запуск E2E-тестов
