@@ -7,7 +7,7 @@ environment:
 install:
   - ps: Install-Product node $env:node_version
   - choco install yarn googlechrome --yes
-  - yarn install --frozen-lockfile
+  - yarn install
 
 build: off
 
