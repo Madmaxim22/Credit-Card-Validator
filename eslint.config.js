@@ -6,7 +6,7 @@ export default [
   pluginJs.configs.recommended,
   {
     ignores: [
-      'build/', 'coverage/', '*.json', 'webpack.config.js', 'puppeteer.config.js',
+      'build/', 'coverage/', '*.json', 'webpack.config.js', 'puppeteer.config.mjs',
     ], // отключение проверок для папок
   },
   {

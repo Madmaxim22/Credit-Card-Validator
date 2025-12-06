@@ -1,5 +1,5 @@
 import puppeteer from 'puppeteer';
-import config from '../../puppeteer.config';
+import config from '../../puppeteer.config.js';
 
 describe('Card validation E2E tests', () => {
   let browser;
